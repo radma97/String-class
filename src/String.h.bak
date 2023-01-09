@@ -4,8 +4,8 @@
 struct String
 {
 private:
-	size_t size; // СЂР°Р·РјРµСЂ СЃС‚СЂРѕРєРё
-	char* str; // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅР°С‡Р°Р»Рѕ СЃС‚СЂРѕРєРё РІ РїР°РјСЏС‚Рё
+	size_t size; // размер строки
+	char* str; // указатель на начало строки в памяти
 	
 public:
 	explicit String(const char* str = "")
