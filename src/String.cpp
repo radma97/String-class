@@ -1,6 +1,6 @@
 #include "String.h"
 
-String::String(const char* str)
+String:: String(const char* str)
 {
 	size = strlen(str);
 
@@ -19,4 +19,3 @@ String::String(size_t n, char c)
 	}
 	this->str[size] = '\0';
 }
-
