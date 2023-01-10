@@ -19,3 +19,15 @@ String::String(size_t n, char c)
 	}
 	this->str[size] = '\0';
 }
+
+size_t String::length() const
+{
+	return size;
+}
+
+String::String(const String& other)
+{
+	size = other.size;
+	str = new char[size + 1];
+	strcpy_s(str, size + 1, other.str);
+}

@@ -5,8 +5,11 @@
 struct String
 {
 private:
-	size_t size = 0; // размер строки
-	char* str = nullptr; // указатель на C-style строку
+	/** Размер строки */
+	size_t size = 0;
+
+	/** Указатель на C-style строку */
+	char* str = nullptr;
 	
 public:
 
@@ -23,8 +26,17 @@ public:
 	 */
 	String(size_t n, char c);
 
+	/**
+	 * Конструктор создания копии объекта
+	 * @param other копируемый объект
+	 */
+	String(const String& other);
+
 	~String()
 	{
 		delete[] str;
 	}
+
+	/* Возвращает длину строки */
+	size_t length() const;
 };
